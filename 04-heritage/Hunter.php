@@ -2,7 +2,7 @@
 
 class Hunter extends Character
 {
-    public function rangedAttack($character)
+    public function rangedAttack(Character $character)
     {
         $character->health -= $this->strenght *3;
     }
