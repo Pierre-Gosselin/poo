@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+
+require_once "cat.php";
+
+// Bianca et Mina sont deux instances différentes de la classe Cat
+
+$cat = new Cat();
+
+$cat->setName('Bianca')
+    ->setType('Chat de gouttière')
+;
+
+echo $cat->getName(); // Affiche "Bianca"
+echo $cat->getType(); // Affiche "Chat de gouttière"
