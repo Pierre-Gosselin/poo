@@ -25,7 +25,7 @@ class BankAccount
 
     public function depositMoney($montant)
     {
-        if ($montant >0)
+        if ($montant < 0)
         {
             return "Le montant est négatif";
         }  
