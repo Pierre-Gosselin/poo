@@ -10,9 +10,3 @@ echo $car1->roll().'<br>';
 
 echo $car1->honk().'<br>';
 
-
-$a = [1 => "A", "B", "C"];
-$a[1] = "A";
-$a[] = "B";
-$a[] = "C";
-print_r($a);
