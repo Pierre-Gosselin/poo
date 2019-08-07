@@ -18,21 +18,26 @@ class Annuaire
 
     public function afficher()
     {      
+        $html = '<ul>';
+
         foreach ($this->contacts as $contact)
         {
-            echo $contact->nom . " ".$contact->prenom.", Tel: ".$contact->tel.", Mail: ".$contact->email."<br>";
+            $html .= "<li>$contact->nom $contact->prenom, Tel: $contact->tel, Mail: $contact->email</li>";
         }
+        $html .= '</ul>';
+        
+        return $html;
     }
 
     public function rechercher($nom)
     {
-        
+        $html = '';        
         foreach ($this->contacts as $contact)
         {
             if ($contact->nom == $nom){
-                echo $contact->nom . " ".$contact->prenom.", Tel: ".$contact->tel.", Mail: ".$contact->email."<br>";
+                $html .=  $contact->nom . " ".$contact->prenom.", Tel: ".$contact->tel.", Mail: ".$contact->email."<br>";
             }
         }
-
+        return $html;
     }
 }

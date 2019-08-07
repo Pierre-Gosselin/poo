@@ -44,7 +44,7 @@ require_once "Contact.php";
 
     echo "<br>Rechercher le nom Doe<br>";
 
-    $annuaire->rechercher("Doe");
+    echo $annuaire->rechercher("Doe");
     
     ?>
 </body>
