@@ -9,31 +9,33 @@
 </head>
 <body>
 <div class="container">
+    <h1>Formulaire de contact</h1>
 <?php
-require_once "Form.php";
+    require_once "Form.php";
 
-$form = new Form();
+    $form = new Form();
 
-$form
-    ->input('email')
-    ->input('firstname')
-    ->input('subject')
-    ->textarea('message')
-    ->select('status',['Particulier', 'Professionel'])
-    ->button('Envoyer')
-;
+    $form
+        ->input('email')
+        ->input('firstname')
+        ->input('subject')
+        ->textarea('message')
+        ->select('status',['Particulier', 'Professionel'])
+        ->button('Envoyer')
+    ;
 
-echo $form; // Affichera le formulaire
-// On pourra soumettre le formulaire
-// et les données saisies resteront dans les champs.
-// Une méthode nous permettra de récupérer les données du formulaire
+    echo $form; // Affichera le formulaire
+    // On pourra soumettre le formulaire
+    // et les données saisies resteront dans les champs.
+    // Une méthode nous permettra de récupérer les données du formulaire
 
-if ($form->isSubmit()) {
-    /**
-     * ['email' => '...', 'subject' => '...', 'message' => '...']
-     */
-    var_dump($form->getData());
-}
+    if ($form->isSubmit())
+    {
+        /**
+         * ['email' => '...', 'subject' => '...', 'message' => '...']
+         */
+        var_dump($form->getData());
+    }
 ?>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
